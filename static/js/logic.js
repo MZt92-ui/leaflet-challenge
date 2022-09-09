@@ -25,7 +25,7 @@ function createMap(overlayMap) {
     // Create the map object with options
     var map = L.map("map", {
       center: [40.09, -110.71],
-      zoom: 5,
+      zoom: 6,
       layers: [lightmap, overlayMap]
     });
 
@@ -46,7 +46,7 @@ function createCircle(response){
 
         var location = response.features[i].geometry.coordinates
         if(typeof location === 'undefined'){
-
+            console.log(location)
         } 
         else {
             if(typeof location[0] === 'undefined'){
